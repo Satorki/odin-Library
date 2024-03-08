@@ -30,45 +30,40 @@
               <p class="pages">300</p>
             </div>
           </div>
-          <div class="book">
-            <p>Enders Game</p>
-            <p>by Orson Scott Card</p>
-            <p>300</p>
-            <p>yes</p>
-          </div>
         </div>
       </section>
     </section>
     <dialog id="modal">
       <h2>Book to add:</h2>
-      <form action="#">
+      <form>
         <div class="input-box">
           <p>Title</p>
-          <input type="text" name="title" id="title"/>
+          <input type="text" name="title" id="title" />
         </div>
         <div class="input-box">
           <p>Author</p>
-          <input type="text" name="author" id="author"/>
+          <input type="text" name="author" id="author" />
         </div>
         <div class="input-box">
           <p>Pages</p>
-          <input type="number" name="pages" id="pages"/>
+          <input type="number" name="pages" id="pages" />
         </div>
         <div class="input-box">
-            <fieldset>
-          <legend>Have You readed it?</legend>
-          <div class="field-left">
-          <input type="radio" name="Yes" id="yes" />
-          <label for="yes">Yes</label>
-        </div>
-        <div class="field-right">
-          <input type="radio" name="Yes" id="no" /> <label for="no ">No</label>
-        </div>
-        </fieldset>
+          <fieldset>
+            <legend>Have You readed it?</legend>
+            <div class="field-left">
+              <input type="radio" name="Yes" id="yes" />
+              <label for="yes">Yes</label>
+            </div>
+            <div class="field-right">
+              <input type="radio" name="Yes" id="no" />
+              <label for="no ">No</label>
+            </div>
+          </fieldset>
         </div>
 
-        <button type="submit" id="addModal">ADD</button>
-        <button id="closeModal">CLOSE</button>
+        <button type="button" id="addModal">ADD</button>
+        <button type="button" id="closeModal">CLOSE</button>
       </form>
     </dialog>
   </body>
