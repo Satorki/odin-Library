@@ -1,8 +1,99 @@
 * {
-    border: 1px solid #000;
-    margin: 0;
+  margin: 0;
 }
 
 body {
-    background-color: #123456;
+  color: #eef2ff;
+  background-color: #082f49;
+  height: 100vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+h1 {
+  padding: 10px 50px 20px 50px;
+  border-bottom: 3px solid #6366f1;
+}
+
+.library {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.panel {
+  height: 100%;
+  border-right: 5px #6366f1 solid;
+  grid-area: 1 / 1 / 1 / 2;
+}
+.panel h2 {
+  margin: 10px 30px;
+}
+.panel .menu {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.panel .menu button {
+  padding: 10px;
+  background-color: #c7d2fe;
+  color: #082f49;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.panel .menu button:hover {
+  box-shadow: 0px 0px 1px 1px #f0f9ff;
+}
+.panel .menu button:active {
+  box-shadow: inset 0px 0px 1px 1px #f0f9ff;
+}
+.panel .menu button:hover span {
+  text-shadow: 0px 0px 5px #f0f9ff;
+}
+
+.shelf {
+  height: 100%;
+  background-color: #312e81;
+  grid-area: 1 / 2 / 1 / 7;
+}
+.shelf-book {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.shelf h2 {
+  margin: 10px 30px;
+}
+.book {
+  color: #082f49;
+  background-color: #a5b4fc;
+  border-left: 10px solid #eef2ff;
+  border-radius: 10px;
+  width: 150px;
+  margin: 20px 0;
+  height: 200px;
+  place-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.book-down {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.book p {
+    text-align: center;
+}
+.book .title {
+    padding: 30px 0;
+    font-size: 1.1rem;
+}
+.book .author {
+    margin: 30px 0 0 0;
 }

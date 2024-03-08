@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/classes/library.js" defer></script>
+    <script src="/classes/book.js" defer></script>
+    <script src="script.js" defer></script>
     <title>Odin Library</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Odin Library</h1>
-    
-</body>
+    <section class="library">
+      <section class="panel">
+        <h2>What would you do?</h2>
+        <div class="menu">
+          <button><span>ADD Book</span></button>
+          <button><span>DELETE Book</span></button>
+        </div>
+      </section>
+      <section class="shelf">
+        <h2>Bookshelf</h2>
+        <div class="shelf-book">
+          <div class="book">
+            <p class="title">Enders Game</p>
+            <p class="author">by Orson Scott Card long name</p>
+            <div class="book-down">
+                <p class="readed">readed</p>
+              <p class="pages">300</p>
+            </div>
+          </div>
+          <div class="book">
+            <p>Enders Game</p>
+            <p>by Orson Scott Card</p>
+            <p>300</p>
+            <p>yes</p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <dialog>
+      <h2>Book to add:</h2>
+      <div class="input-box">
+        <p>1</p>
+        <input type="text" />
+      </div>
+      <div class="input-box">
+        <p>2</p>
+        <input type="text" />
+      </div>
+      <div class="input-box">
+        <p>3</p>
+        <input type="text" />
+      </div>
+      <div class="input-box">
+        <p>4</p>
+        <input type="text" />
+      </div>
+    </dialog>
+  </body>
 </html>
