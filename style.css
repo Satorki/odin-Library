@@ -1,3 +1,4 @@
+/* MAIN SETTINGS */
 * {
   margin: 0;
 }
@@ -14,6 +15,7 @@ ul {
   padding-left: 0;
 }
 
+/* UP -SECTOR */
 h1 {
   padding: 10px 50px 20px 50px;
   border-bottom: 3px solid #6366f1;
@@ -23,8 +25,9 @@ h1 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
+
+/* LEFT PANEL MENU -SECTOR */
 .panel {
-  height: 100%;
   border-right: 5px #6366f1 solid;
   grid-area: 1 / 1 / 1 / 2;
 }
@@ -37,7 +40,8 @@ h1 {
   flex-direction: column;
   gap: 10px;
 }
-.panel .menu button {
+.panel .menu button,
+#modal form button {
   padding: 10px;
   background-color: #c7d2fe;
   color: #082f49;
@@ -56,15 +60,15 @@ h1 {
 .panel .menu button:hover span {
   text-shadow: 0px 0px 5px #f0f9ff;
 }
-
+/* BOOKSHELF -SECTOR*/
 .shelf {
-  height: 100%;
   background-color: #312e81;
   grid-area: 1 / 2 / 1 / 7;
+  box-shadow: inset 12px 12px 15px 1px #3730a3;
 }
 .shelf-book {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .shelf h2 {
   margin: 10px 30px;
@@ -83,17 +87,64 @@ h1 {
   justify-content: space-between;
 }
 .book-down {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 .book p {
-    text-align: center;
+  text-align: center;
 }
 .book .title {
-    padding: 30px 0;
-    font-size: 1.1rem;
+  padding: 30px 0;
+  font-size: 1.1rem;
 }
 .book .author {
-    margin: 30px 0 0 0;
+  margin: 30px 0 0 0;
+}
+
+/* MODAL */
+#modal {
+  z-index: 3;
+  color: #1e1b4b;
+  background-color: #eef2ff;
+  height: 500px;
+  margin: auto;
+  width: 400px;
+  border-radius: 20px;
+  border-left: 10px solid #1e1b4b;
+  box-shadow: 5px 5px 10px 1px #312e81;
+}
+#modal h2 {
+  margin: 15px 0;
+}
+#modal form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+#modal form input {
+  border-radius: 5px;
+  border: none;
+  font-size: 1.1rem;
+  padding: 3px;
+}
+#modal form input:focus {
+  outline-color: #0000ff;
+  outline-width: 1px;
+  outline-style: solid;
+  box-shadow: 2px 2px 5px 1px rgba(120, 60, 60, 0.5);
+}
+#modal form fieldset {
+  display: flex;
+  justify-content: space-around;
+}
+
+#modal form button:hover {
+  box-shadow: 0px 0px 1px 1px #818cf8;
+}
+#modal form button:active {
+  box-shadow: inset 0px 0px 1px 1px #818cf8;
+}
+#modal form button:hover span {
+  text-shadow: 0px 0px 5px #818cf8;
 }

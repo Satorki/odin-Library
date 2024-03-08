@@ -13,9 +13,9 @@
     <h1>Odin Library</h1>
     <section class="library">
       <section class="panel">
-        <h2>What would you do?</h2>
+        <h2>What would you like to do?</h2>
         <div class="menu">
-          <button><span>ADD Book</span></button>
+          <button id="openModal"><span>ADD Book</span></button>
           <button><span>DELETE Book</span></button>
         </div>
       </section>
@@ -26,7 +26,7 @@
             <p class="title">Enders Game</p>
             <p class="author">by Orson Scott Card long name</p>
             <div class="book-down">
-                <p class="readed">readed</p>
+              <p class="readed">readed</p>
               <p class="pages">300</p>
             </div>
           </div>
@@ -39,24 +39,37 @@
         </div>
       </section>
     </section>
-    <dialog>
+    <dialog id="modal">
       <h2>Book to add:</h2>
-      <div class="input-box">
-        <p>1</p>
-        <input type="text" />
-      </div>
-      <div class="input-box">
-        <p>2</p>
-        <input type="text" />
-      </div>
-      <div class="input-box">
-        <p>3</p>
-        <input type="text" />
-      </div>
-      <div class="input-box">
-        <p>4</p>
-        <input type="text" />
-      </div>
+      <form action="#">
+        <div class="input-box">
+          <p>Title</p>
+          <input type="text" name="title" id="title"/>
+        </div>
+        <div class="input-box">
+          <p>Author</p>
+          <input type="text" name="author" id="author"/>
+        </div>
+        <div class="input-box">
+          <p>Pages</p>
+          <input type="number" name="pages" id="pages"/>
+        </div>
+        <div class="input-box">
+            <fieldset>
+          <legend>Have You readed it?</legend>
+          <div class="field-left">
+          <input type="radio" name="Yes" id="yes" />
+          <label for="yes">Yes</label>
+        </div>
+        <div class="field-right">
+          <input type="radio" name="Yes" id="no" /> <label for="no ">No</label>
+        </div>
+        </fieldset>
+        </div>
+
+        <button type="submit" id="addModal">ADD</button>
+        <button id="closeModal">CLOSE</button>
+      </form>
     </dialog>
   </body>
 </html>
