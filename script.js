@@ -25,11 +25,13 @@ addModalButton.addEventListener("click", (event) => {
   } else if (radioInputs[1].checked) {
     radio = "not readed";
   }
+
   let book = new Book(
     titleInput.value,
     authorInput.value,
     pagesInput.value,
-    radio
+    radio,
+    id = titleInput.value + pagesInput.value
   );
   myLibrary.addBooks(book);
 });
@@ -41,4 +43,17 @@ closeModalButton.addEventListener("click", () => {
 });
 
 //DELETING BOOKS
+const deleteBookButton = document.querySelector("#deleteBook");
+let deletedBookButtonChecked = false;
 
+deleteBookButton.addEventListener("click", () => {
+  if (!deletedBookButtonChecked) {
+    deleteBookButton.style.backgroundColor = "red";
+    deletedBookButtonChecked = true;
+  } else {
+    deleteBookButton.style.backgroundColor = "";
+    deletedBookButtonChecked = false;
+  }
+
+  console.log(myLibrary);
+});
