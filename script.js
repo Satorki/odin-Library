@@ -2,7 +2,7 @@
 const openModalButton = document.querySelector("#openModal");
 const submitModalButton = document.querySelector("#submitModal");
 const addModalButton = document.querySelector("#addModal");
-const closeModalButton = document.querySelector("#closeModal")
+const closeModalButton = document.querySelector("#closeModal");
 const dialog = document.getElementById("modal");
 
 openModalButton.addEventListener("click", () => {
@@ -32,7 +32,7 @@ addModalButton.addEventListener("click", (event) => {
     titleInput.value,
     authorInput.value,
     pagesInput.value,
-    radio, id
+    radio
   );
   myLibrary.addBooks(book);
 });
@@ -40,18 +40,19 @@ addModalButton.addEventListener("click", (event) => {
 //SHOWING BOOKS TO DOM
 submitModalButton.addEventListener("click", () => {
   myLibrary.libraryCreate();
-  dialog.close();
-  
+  myLibrary.libraryRefresh();
 });
+
 //CLOSE MODAL
 closeModalButton.addEventListener("click", () => {
   dialog.close();
 });
 
 //DELETING BOOKS
-const deleteBookButton = document.querySelector("#deleteBookBox");
+const bookDeleteButton = document.querySelectorAll("#bookDelete");
 
-// deleteBookButton.addEventListener("click", () => {
-
-//   console.log(myLibrary);
-// });
+bookDeleteButton.forEach((button) => {
+  button.addEventListener("click", () => {
+    console.log("Kliknięto przycisk usuwania książki");
+  });
+});

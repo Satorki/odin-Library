@@ -9,6 +9,9 @@ class Library {
       return element.domCreate();
     });
   }
+  libraryRefresh() {
+    return this.shelf = [];
+  }
   addBooks(...books) {
     books.forEach((book) => this.addBookToLibrary(book));
   }
