@@ -31,7 +31,6 @@ addModalButton.addEventListener("click", (event) => {
     authorInput.value,
     pagesInput.value,
     radio,
-    id = titleInput.value + pagesInput.value
   );
   myLibrary.addBooks(book);
 });
