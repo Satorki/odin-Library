@@ -12,18 +12,33 @@ openModalButton.addEventListener("click", () => {
 const titleInput = document.querySelector("#title");
 const authorInput = document.querySelector("#author");
 const pagesInput = document.querySelector("#pages");
+const radioInputs = document.querySelectorAll("input[type='radio']");
 
 //ADDING BOOK TO LIBRARY
 const myLibrary = new Library();
 addModalButton.addEventListener("click", (event) => {
   event.preventDefault();
-  let book = new Book(titleInput.value, authorInput.value, pagesInput.value);
+
+  let radio = "";
+  if (radioInputs[0].checked) {
+    radio = "readed";
+  } else if (radioInputs[1].checked) {
+    radio = "not readed";
+  }
+  let book = new Book(
+    titleInput.value,
+    authorInput.value,
+    pagesInput.value,
+    radio
+  );
   myLibrary.addBooks(book);
 });
 
 //SHOWING BOOKS TO DOM
 closeModalButton.addEventListener("click", () => {
-  console.log(myLibrary.libraryPreview());
   myLibrary.libraryPreview();
   dialog.close();
 });
+
+//DELETING BOOKS
+

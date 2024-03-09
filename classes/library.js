@@ -6,7 +6,7 @@ class Library {
   }
   libraryPreview() {
     return this.shelf.forEach((element) => {
-      return console.log(element);
+      return element.domCreate();
     });
   }
   addBooks(...books) {

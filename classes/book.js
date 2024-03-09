@@ -1,5 +1,5 @@
 class Book {
-  constructor(title, author, pages, read = false) {
+  constructor(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -24,12 +24,19 @@ class Book {
     book.appendChild(authorPara);
     authorPara.appendChild(authorText);
     //PAGES
+    const bookDown = document.createElement("div")
+    bookDown.classList.add("book-down")
+    const readedPara = document.createElement("p");
+    readedPara.classList.add("readed");
+    const readedText = document.createTextNode(this.read);
+    bookDown.appendChild(readedPara);
+    readedPara.appendChild(readedText);
+    //READ
     const pagesPara = document.createElement("p");
     pagesPara.classList.add("pages");
     const pagesText = document.createTextNode(this.pages);
-    book.appendChild(pagesPara);
+    book.appendChild(bookDown);
+    bookDown.appendChild(pagesPara);
     pagesPara.appendChild(pagesText);
-    //READ
-    //
   }
 }
