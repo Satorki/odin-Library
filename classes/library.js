@@ -6,7 +6,7 @@ class Library {
   }
   libraryPreview() {
     return this.shelf.forEach((element) => {
-      return element;
+      return console.log(element);
     });
   }
   addBooks(...books) {
