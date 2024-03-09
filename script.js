@@ -1,7 +1,8 @@
 //MODAL START
 const openModalButton = document.querySelector("#openModal");
-const closeModalButton = document.querySelector("#closeModal");
+const submitModalButton = document.querySelector("#submitModal");
 const addModalButton = document.querySelector("#addModal");
+const closeModalButton = document.querySelector("#closeModal")
 const dialog = document.getElementById("modal");
 
 openModalButton.addEventListener("click", () => {
@@ -17,6 +18,7 @@ const radioInputs = document.querySelectorAll("input[type='radio']");
 //ADDING BOOK TO LIBRARY
 const myLibrary = new Library();
 addModalButton.addEventListener("click", (event) => {
+  let id = Date.now();
   event.preventDefault();
 
   let radio = "";
@@ -30,29 +32,26 @@ addModalButton.addEventListener("click", (event) => {
     titleInput.value,
     authorInput.value,
     pagesInput.value,
-    radio,
+    radio, id
   );
   myLibrary.addBooks(book);
 });
 
 //SHOWING BOOKS TO DOM
+submitModalButton.addEventListener("click", () => {
+  myLibrary.libraryCreate();
+  dialog.close();
+  
+});
+//CLOSE MODAL
 closeModalButton.addEventListener("click", () => {
-  myLibrary.libraryPreview();
   dialog.close();
 });
 
 //DELETING BOOKS
-const deleteBookButton = document.querySelector("#deleteBook");
-let deletedBookButtonChecked = false;
+const deleteBookButton = document.querySelector("#deleteBookBox");
 
-deleteBookButton.addEventListener("click", () => {
-  if (!deletedBookButtonChecked) {
-    deleteBookButton.style.backgroundColor = "red";
-    deletedBookButtonChecked = true;
-  } else {
-    deleteBookButton.style.backgroundColor = "";
-    deletedBookButtonChecked = false;
-  }
+// deleteBookButton.addEventListener("click", () => {
 
-  console.log(myLibrary);
-});
+//   console.log(myLibrary);
+// });

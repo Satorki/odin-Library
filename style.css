@@ -73,15 +73,17 @@ h1 {
 .shelf h2 {
   margin: 10px 30px;
 }
+.book-box {
+  margin: 20px 20px;
+  place-self: center;
+}
 .book {
   color: #082f49;
   background-color: #a5b4fc;
   border-left: 10px solid #eef2ff;
   border-radius: 10px;
   width: 150px;
-  margin: 20px 0;
   height: 200px;
-  place-self: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -101,8 +103,25 @@ h1 {
 .book .author {
   margin: 30px 0 0 0;
 }
-.book:hover {
-  background-color:red;
+.book-box button {
+  width: 160px;
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #c7d2fe;
+  color: #082f49;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.book-box button:hover {
+  box-shadow: 0px 0px 1px 1px #f0f9ff;
+}
+.book-box button:active {
+  box-shadow: inset 0px 0px 1px 1px #f0f9ff;
+}
+.book-box button:hover span {
+  text-shadow: 0px 0px 5px #f0f9ff;
 }
 
 /* MODAL */

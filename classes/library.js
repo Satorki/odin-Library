@@ -4,7 +4,7 @@ class Library {
     this.shelf.push(book);
     return this;
   }
-  libraryPreview() {
+  libraryCreate() {
     return this.shelf.forEach((element) => {
       return element.domCreate();
     });

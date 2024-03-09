@@ -16,12 +16,12 @@
         <h2>What would you like to do?</h2>
         <div class="menu">
           <button id="openModal"><span>ADD Book</span></button>
-          <button id="deleteBook"><span>DELETE Book</span></button>
         </div>
       </section>
       <section class="shelf">
         <h2>Bookshelf</h2>
         <div class="shelf-book">
+          <div class="book-box">
           <div class="book">
             <p class="title">Enders Game</p>
             <p class="author">by Orson Scott Card long name</p>
@@ -29,6 +29,8 @@
               <p class="readed">readed</p>
               <p class="pages">300</p>
             </div>
+          </div>
+          <button id="bookDelete">remove</button>
           </div>
         </div>
       </section>
@@ -63,6 +65,7 @@
         </div>
 
         <button type="button" id="addModal">ADD</button>
+        <button type="button" id="submitModal">SUBMIT</button>
         <button type="button" id="closeModal">CLOSE</button>
       </form>
     </dialog>
