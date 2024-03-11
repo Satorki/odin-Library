@@ -1,5 +1,5 @@
-import { Library } from '/classes/library.js';
-import { Book } from '/classes/book.js';
+import { Library } from './classes/library.js';
+import { Book } from './classes/book.js';
 
 //MODAL START
 const openModalButton = document.querySelector("#openModal");
