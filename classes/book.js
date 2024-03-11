@@ -28,15 +28,19 @@ class Book {
     const authorText = document.createTextNode(this.author);
     book.appendChild(authorPara);
     authorPara.appendChild(authorText);
-    //PAGES
+    //READ
     const bookDown = document.createElement("div");
     bookDown.classList.add("book-down");
     const readedPara = document.createElement("p");
     readedPara.classList.add("readed");
-    const readedText = document.createTextNode(this.read);
+    const readedCheckbox = document.createElement("input")
+    readedCheckbox.type = "checkbox";
+    readedCheckbox.checked = this.read;
+    const readedText = document.createTextNode("Readed:");
     bookDown.appendChild(readedPara);
     readedPara.appendChild(readedText);
-    //READ
+    bookDown.appendChild(readedCheckbox);
+    //PAGES
     const pagesPara = document.createElement("p");
     pagesPara.classList.add("pages");
     const pagesText = document.createTextNode(this.pages);

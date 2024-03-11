@@ -92,6 +92,12 @@ h1 {
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.book-down input {
+  margin: 0 10px 3px 0;
+  width: 20px;
+  height: 20px;
 }
 .book p {
   text-align: center;

@@ -26,9 +26,9 @@ addModalButton.addEventListener("click", (event) => {
 
   let radio = "";
   if (radioInputs[0].checked) {
-    radio = "readed";
+    radio = true;
   } else if (radioInputs[1].checked) {
-    radio = "not readed";
+    radio = false;
   }
 
   let book = new Book(
