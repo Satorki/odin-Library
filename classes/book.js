@@ -6,10 +6,12 @@ class Book {
     this.read = read;
   }
   domCreate() {
+    const bookId = "bookDelete_" + Date.now();
     //NEW BOOK
     const shelfBook = document.querySelector(".shelf-book");
     const bookBox = document.createElement("div");
     bookBox.classList.add("book-box");
+    bookBox.id = bookId;
     const book = document.createElement("div");
     book.classList.add("book");
     shelfBook.appendChild(bookBox);
@@ -43,9 +45,16 @@ class Book {
     pagesPara.appendChild(pagesText);
     //DELETE BUTTON
     const btnBookDelete = document.createElement("button");
-    btnBookDelete.id = "bookDelete";
+    btnBookDelete.id = bookId;
     const btnBookDeleteText = document.createTextNode("remove");
-    bookBox.appendChild(btnBookDelete);
     btnBookDelete.appendChild(btnBookDeleteText);
+    bookBox.appendChild(btnBookDelete);
+    btnBookDelete.addEventListener("click", () => {
+      if (bookBox.id === btnBookDelete.id) {
+        bookBox.remove()
+      }
+  });
   }
 }
+
+export { Book };

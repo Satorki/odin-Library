@@ -1,3 +1,6 @@
+import { Library } from '/classes/library.js';
+import { Book } from '/classes/book.js';
+
 //MODAL START
 const openModalButton = document.querySelector("#openModal");
 const submitModalButton = document.querySelector("#submitModal");
@@ -46,13 +49,4 @@ submitModalButton.addEventListener("click", () => {
 //CLOSE MODAL
 closeModalButton.addEventListener("click", () => {
   dialog.close();
-});
-
-//DELETING BOOKS
-const bookDeleteButton = document.querySelectorAll("#bookDelete");
-
-bookDeleteButton.forEach((button) => {
-  button.addEventListener("click", () => {
-    console.log("Kliknięto przycisk usuwania książki");
-  });
 });

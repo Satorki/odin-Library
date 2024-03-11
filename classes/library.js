@@ -10,9 +10,11 @@ class Library {
     });
   }
   libraryRefresh() {
-    return this.shelf = [];
+    return (this.shelf = []);
   }
   addBooks(...books) {
     books.forEach((book) => this.addBookToLibrary(book));
   }
 }
+
+export { Library };
