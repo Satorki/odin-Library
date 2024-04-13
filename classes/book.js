@@ -33,7 +33,7 @@ class Book {
     bookDown.classList.add("book-down");
     const readedPara = document.createElement("p");
     readedPara.classList.add("readed");
-    const readedCheckbox = document.createElement("input")
+    const readedCheckbox = document.createElement("input");
     readedCheckbox.type = "checkbox";
     readedCheckbox.checked = this.read;
     const readedText = document.createTextNode("Readed:");
@@ -55,9 +55,9 @@ class Book {
     bookBox.appendChild(btnBookDelete);
     btnBookDelete.addEventListener("click", () => {
       if (bookBox.id === btnBookDelete.id) {
-        bookBox.remove()
+        bookBox.remove();
       }
-  });
+    });
   }
 }
 
